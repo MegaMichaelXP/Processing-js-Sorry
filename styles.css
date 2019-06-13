@@ -1,0 +1,34 @@
+body {
+    background-color: rgb(200,200,200);
+    color: rgb(0,0,0);
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+#content {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+header {
+	
+}
+
+footer {
+    text-align:left;
+	font-style: normal;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+inst {
+    text-align:left;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+ul {
+    text-align:left;
+    position: relative;
+}

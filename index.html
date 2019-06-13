@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<title>Michael's Sorry</title>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="styles.css">
+		<script src="processing.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Michael's Sorry</h1>
+		</header>
+			<section id="content">
+				<canvas id="Sorry" data-processing-sources="Sorry/Sorry.pde Sorry/Board.pde Sorry/BoardItem.pde Sorry/Card.pde Sorry/Deck.pde Sorry/Inspector.pde Sorry/Pawn.pde Sorry/Slide.pde Sorry/Space.pde ">
+				</canvas>
+		    </section>
+	    <footer>
+	    	<br>
+		    <inst>Basic Instructions:</inst>
+		    <ul>
+		    	<li>Click on the blank card to draw your card.</li>
+		    	<li>To move a pawn, left click on it.</li>
+		    	<li>If you can't move, click anywhere to skip your turn.</li>
+		    	<li>To cancel any pawn selection made with a 7, 11, or special 5, press space.</li>
+			</ul>
+			<br>
+			<inst>Card Instructions:</inst>
+			<ul>
+			    <li>1 and 2 - Left click on your start space if you wish to move a pawn from start.</li>
+			    <li>7 - If you would like to split between two pawns, right click a pawn until the desired number of spaces appears, then left click another pawn to give it the remaining spaces.</li>
+			    <li>10 - Left click to move forward 10, right click to move backward 1.</li>
+			    <li>11 - If you would like to switch with an opponent, right click one of your pawns, then right click the pawn you would like to switch with. If you can't move forward 11 and do not want to switch, press space with no pawns selected to skip your turn.</li>
+			    <li>Sorry! - Left click an opponent's pawn. A pawn from your start will take its place and your opponent's pawn will be bumped back to start.</li>
+			</ul>
+			<br>
+			<inst>Special Card Instructions:</inst>
+			<ul>
+				<li>3 - If you're the right player, you may click the card again to draw the top 3 cards in the deck, then click any valid card to choose it. If none of the three cards drawn are valid, click anywhere to skip your turn.</li>
+				<li>5 - If you're the right player, you may move one of your pawns ahead of any given opponent's pawn. To do this, right click one of your pawns, then right click the opponent's pawn you wish to move it ahead of.</li>
+				<li>8 - If you're the right player, you may right click any given opponent's pawn to move it back 8 spaces.</li>
+				<li>12 - If you're the right player, you may right click your lead pawn to move it directly to home.</li>
+			</ul>
+	    </footer>
+	</body>
+</html>

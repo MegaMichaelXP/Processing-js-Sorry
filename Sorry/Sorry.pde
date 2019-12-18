@@ -289,7 +289,7 @@ void draw() {
     text("Start",width/2-1,405);
     text("Sorry!",width/2-1,50);
     textSize(25);
-    text("Michael Vollmer - AP Computer Science",width/2-1,110);
+    text("Recreated by Michael Vollmer",width/2-1,110);
     textSize(20);
     text("* Teams: Red and Yellow vs Blue and Green (4 players required)",width/2,555);
     textSize(35);

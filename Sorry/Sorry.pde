@@ -286,7 +286,10 @@ void draw() {
     fill(0);
     textSize(50);
     textAlign(CENTER,CENTER);
-    text("Start",width/2-1,405);
+    if (players < 2)
+      text("---",width/2-1,405);
+    else
+      text("Start",width/2-1,405);
     text("Sorry!",width/2-1,50);
     textSize(25);
     text("Recreated by Michael Vollmer",width/2-1,110);
@@ -297,10 +300,14 @@ void draw() {
       text("Enabled",650,239);
     else
       text("Disabled",650,239);
-    if (TEAMS)
-      text("Enabled",650,299);
-    else
-      text("Disabled",650,299);
+    if (players < 4){
+        text("---",650,299);
+    } else {
+      if (TEAMS)
+        text("Enabled",650,299);
+      else
+        text("Disabled",650,299);
+    }
     textAlign(LEFT,CENTER);
     text("Players:",230,180);
     text("Special cards:",230,240);

@@ -6,7 +6,7 @@ public class Deck {
   public Deck(boolean specialCards) {
     theDeck = new Card[45];
     this.specialCards = specialCards;
-    int cardIndex = 0;
+    int cardIndex = 1;
     for(int i=1; i<=13; i++) {
       if (i != 6 && i != 9) {
         for (int j=0; j<4; j++) {

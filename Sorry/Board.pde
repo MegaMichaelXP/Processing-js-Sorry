@@ -231,6 +231,35 @@ public class Board {
     return false;
   }
   
+  public boolean validateMoveAhead(int row, int col, int id) {
+    Pawn checkedPawn1 = findPawn(row,col);
+    if (checkedPawn1 != null && checkedPawn1.spacesRemaining() >= 1) {
+      inspector1 = new Inspector(row,col,id,checkedPawn1.inSafetyZone());
+      inspector1.moveForward(1);
+      Pawn checkedPawn2 = findPawn(inspector1.row(),inspector1.col());
+      if (checkedPawn2 == null) {
+        if ((inspector1.row() == 6 && inspector1.col() == 2) && id == 0) {
+          inspector1.updateRow(-1);
+          inspector1.updateCol(-1);
+        } else if ((inspector1.row() == 2 && inspector1.col() == 9) && id == 1) {
+          inspector1.updateRow(-1);
+          inspector1.updateCol(-1);
+        } else if ((inspector1.row() == 9 && inspector1.col() == 13) && id == 2) {
+          inspector1.updateRow(-1);
+          inspector1.updateCol(-1);
+        } else if ((inspector1.row() == 13 && inspector1.col() == 6) && id == 3) {
+          inspector1.updateRow(-1);
+          inspector1.updateCol(-1);
+        }
+        return true;
+      }
+      if (checkedPawn2.isActive() || checkedPawn2.getId() != checkedPawn1.getId()) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
   // Returns the number of pawns that can move forward legally
   public int validateTotalForward(int player, int value, boolean teams) {
     int validPawns = 0;
@@ -500,7 +529,7 @@ public class Board {
     if (pawn1.getId() % 2 == pawn2.getId() % 2) {
       return false;
     }
-    if (!validateForward(row2,col2,pawn1.getId())) {
+    if (!validateMoveAhead(row2,col2,pawn1.getId())) {
       return false;
     }
     pawn1.updateRow(row2);
